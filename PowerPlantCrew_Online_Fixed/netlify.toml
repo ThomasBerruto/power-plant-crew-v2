@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build:public"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22.23.4"
+
+# Make direct navigation/reload of a future /join link work.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
